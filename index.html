@@ -2,13 +2,61 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>yorsal's home page</title>
-	<link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css" rel="stylesheet" />
-	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+	<title>yorsal's</title>
+	<link href="./bootstrap.css" rel="stylesheet" />
+	<link href="./animate.css" rel="stylesheet" />
 
+	<style type="text/css">
+		html, body { font-family: "Microsoft yahei", "Tahoma", sans-serif;  }
+		.right-sidebar {  }
+		.affix { padding-left:10px;  }
+		.affix ul { margin-top: 30px;  }
+		.affix ul li {  margin-top: 10px; }
+		.affix ul li a.selected { text-decoration: underline; }
+		.media iframe {  border:none;}
+
+	</style>
 </head>
 <body>
 
-<h1>comming soon...</h1>
+<div class="row">
+	<div class="col-sm-2">
+		<div class="affix">
+			<h1>Yorsal's</h1>
+			<ul class="list-unstyled">
+				<li><a href="#" class="selected" data-pdf="zh.pdf">中文简历</a></li>
+				<li><a href="#" class=""  data-pdf="en.pdf">English Resume</a></li>
+			</ul>
+			
+		</div>
+
+	</div>
+
+	<div class="col-sm-10 right-sidebar">
+		<a class="media" href="zh.pdf"></a> 
+	</div>
+
+
+	
+</div>
+
+<script src="./jquery-2.1.1.js"></script>
+<script src="./bootstrap.js"></script>
+<script src="./jquery.media.js"></script>
+
+<script type="text/javascript">
+	$('a.media').media({  width:'100%', height: $(document).height() });
+
+	$('.affix a').click(function(e){
+		e.preventDefault();
+		$('.affix a').removeClass('selected');
+		$(this).addClass('selected');
+
+		$('.right-sidebar').html('<a class="media" href="'+ $(this).attr('data-pdf') +'"></a>');
+		$('a.media').hide();
+		$('a.media').media({ width:'100%', height: $(document).height() });
+		
+	});
+</script>
 </body>
 </html>
