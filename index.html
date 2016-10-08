@@ -24,8 +24,8 @@
 		<div class="affix animated bounceInDown">
 			<h1 class="">Yorsal's</h1>
 			<ul class="list-unstyled">
-				<li class="animated"><a href="#" class="selected" data-pdf="zh.pdf">中文简历</a></li>
-				<li class="animated"><a href="#" class="animated"  data-pdf="en.pdf">English Resume</a></li>
+				<li class="animated"><a href="#" class="selected" data-pdf="zh.pdf"><i class="glyphicon glyphicon-heart"></i> 中文简历</a></li>
+				<li class="animated"><a href="#" class="animated"  data-pdf="en.pdf"><i class="glyphicon glyphicon-heart hide"></i> English Resume</a></li>
 			</ul>
 			
 		</div>
@@ -51,8 +51,10 @@
 		e.preventDefault();
 		$('.affix a').removeClass('selected')
 		$('.affix li').removeClass('pulse');
-		$(this).addClass('selected')
+		$('.affix a > i').addClass('hide');
+		$(this).addClass('selected');
 		$(this).parent().addClass('pulse');
+		$(this).find('i').removeClass('hide');
 
 		$('.right-sidebar').html('<a class="media" href="'+ $(this).attr('data-pdf') +'"></a>');
 		$('a.media').hide();
