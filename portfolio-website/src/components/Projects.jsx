@@ -94,7 +94,7 @@ const Lightbox = ({ images, currentIndex, isOpen, onClose, title }) => {
         className="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center p-4"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative w-full h-full flex items-center justify-center">
+        <div className="relative w-full h-full flex items-center justify-center z-10">
           {images.map((image, index) => (
             <div
               key={index}
@@ -119,7 +119,7 @@ const Lightbox = ({ images, currentIndex, isOpen, onClose, title }) => {
                 e.stopPropagation()
                 goToPrevious()
               }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-3 transition-colors duration-200"
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-3 transition-colors duration-200 z-30"
               aria-label="Previous image"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -129,14 +129,14 @@ const Lightbox = ({ images, currentIndex, isOpen, onClose, title }) => {
                 e.stopPropagation()
                 goToNext()
               }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-3 transition-colors duration-200"
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-3 transition-colors duration-200 z-30"
               aria-label="Next image"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
 
             {/* 指示器 */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-30">
               {images.map((_, index) => (
                 <button
                   key={index}
@@ -155,7 +155,7 @@ const Lightbox = ({ images, currentIndex, isOpen, onClose, title }) => {
             </div>
 
             {/* 图片计数器 */}
-            <div className="absolute top-4 left-4 bg-white/10 text-white text-sm px-3 py-1 rounded">
+            <div className="absolute top-4 left-4 bg-white/10 text-white text-sm px-3 py-1 rounded z-30">
               {activeIndex + 1} / {images.length}
             </div>
           </>
