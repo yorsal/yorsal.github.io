@@ -4,6 +4,7 @@ import { translations } from '../data/translations';
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { TextPlugin } from 'gsap/TextPlugin';
+import OptimizedImage from './OptimizedImage';
 
 gsap.registerPlugin(TextPlugin);
 
@@ -208,10 +209,10 @@ const Hero = () => {
             ref={imageRef}
             className="w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-xl"
           >
-            <img
-              className="w-full h-full object-cover"
-              src="/hero-image.jpg"
+            <OptimizedImage
+              src="/hero-image.webp"
               alt="Yang Le"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

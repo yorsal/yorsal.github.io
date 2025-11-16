@@ -4,6 +4,7 @@ import { translations } from '../data/translations'
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import OptimizedImage from './OptimizedImage'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -95,14 +96,18 @@ const Lightbox = ({ images, currentIndex, isOpen, onClose, title }) => {
       >
         <div className="relative w-full h-full flex items-center justify-center">
           {images.map((image, index) => (
-            <img
+            <div
               key={index}
-              className={`absolute max-w-full max-h-full object-contain transition-opacity duration-500 ${
+              className={`absolute max-w-full max-h-full transition-opacity duration-500 ${
                 index === activeIndex ? 'opacity-100' : 'opacity-0'
               }`}
-              src={image}
-              alt={`${title} - Image ${index + 1}`}
-            />
+            >
+              <OptimizedImage
+                src={image}
+                alt={`${title} - Image ${index + 1}`}
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
           ))}
         </div>
 
@@ -201,14 +206,18 @@ const ImageCarousel = ({ images, title, onImageClick }) => {
     <div className="relative rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 shadow-lg group cursor-pointer">
       <div className="relative aspect-video overflow-hidden" onClick={handleImageClick}>
         {images.map((image, index) => (
-          <img
+          <div
             key={index}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+            className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
               index === currentIndex ? 'opacity-100' : 'opacity-0'
             }`}
-            src={image}
-            alt={`${title} - Image ${index + 1}`}
-          />
+          >
+            <OptimizedImage
+              src={image}
+              alt={`${title} - Image ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </div>
         ))}
       </div>
 
@@ -293,9 +302,9 @@ const Projects = () => {
       desc: t.projects.project1.desc,
       tags: ['Next.js 15', 'React 19', 'TypeScript', 'Solidity', 'Hardhat', 'PostgreSQL', 'Prisma'],
       images: [
-        '/showcase/weather-moments-1.jpg',
-        '/showcase/weather-moments-2.jpg',
-        '/showcase/weather-moments-3.jpg',
+        '/showcase/weather-moments-1.webp',
+        '/showcase/weather-moments-2.webp',
+        '/showcase/weather-moments-3.webp',
       ],
       liveDemo: 'https://weather-moments.eu.cc/',
     },
@@ -304,8 +313,8 @@ const Projects = () => {
       desc: t.projects.project2.desc,
       tags: ['Vite', 'React', 'TypeScript', 'TailwindCSS', 'Chrome Extension'],
       images: [
-        '/showcase/ai-chat-nav-1.png',
-        '/showcase/ai-chat-nav-2.png',
+        '/showcase/ai-chat-nav-1.webp',
+        '/showcase/ai-chat-nav-2.webp',
       ],
       github: 'https://github.com/yorsal/chrome-ai-chat-navigator',
     },
@@ -314,7 +323,7 @@ const Projects = () => {
       desc: t.projects.project3.desc,
       tags: ['React', 'Micro Frontend', 'Qiankun', 'CI/CD'],
       images: [
-        '/showcase/edmodo-1.jpg',
+        '/showcase/edmodo-1.webp',
         '/showcase/edmodo-2.webp',
       ],
     },
@@ -323,8 +332,8 @@ const Projects = () => {
       desc: t.projects.project4.desc,
       tags: ['Vue.js', 'H5', 'Hybrid App'],
       images: [
-        '/showcase/e-1.png',
-        '/showcase/e-2.png',
+        '/showcase/e-1.webp',
+        '/showcase/e-2.webp',
       ],
     },
   ]
