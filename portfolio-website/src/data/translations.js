@@ -15,7 +15,7 @@ export const translations = {
         '具备大型项目架构设计与团队管理能力。作为技术主力深度参与国家级教育平台开发，主导百万级用户项目架构设计。',
         '2年+ AI 辅助编程实践者，擅长使用 Cursor/GitHub Copilot 提升开发效率40%以上。',
       ],
-      letsTalk: '开始交流',
+      letsTalk: '开始交流 (Telegram)',
       downloadCV: '下载简历',
     },
     about: {
@@ -103,7 +103,7 @@ export const translations = {
         'Strong capabilities in large-scale project architecture design and team management. As a technical lead, deeply involved in national-level education platform development, leading architecture design for million-user projects.',
         '2+ years of AI-assisted programming practitioner, skilled in using Cursor/GitHub Copilot to improve development efficiency by 40%+.',
       ],
-      letsTalk: 'Let\'s Talk',
+      letsTalk: 'Let\'s Talk (Telegram)',
       downloadCV: 'Download CV',
     },
     about: {

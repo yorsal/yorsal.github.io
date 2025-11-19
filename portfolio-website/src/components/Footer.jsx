@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Youtube, Twitter } from 'lucide-react';
+import { Mail, Linkedin, Facebook, Twitter } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';
 
@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex items-center gap-6">
           <a
             className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-            href="#"
+            href="https://www.linkedin.com/in/le-yang-67a954279"
             aria-label="LinkedIn"
           >
             <Linkedin className="w-5 h-5" />
@@ -20,15 +20,15 @@ const Footer = () => {
           </a>
           <a
             className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-            href="#"
-            aria-label="YouTube"
+            href="https://www.facebook.com/yorsal"
+            aria-label="Facebook"
           >
-            <Youtube className="w-5 h-5" />
-            <span className="hidden sm:inline">YOUTUBE</span>
+            <Facebook className="w-5 h-5" />
+            <span className="hidden sm:inline">FACEBOOK</span>
           </a>
           <a
             className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-            href="#"
+            href="https://x.com/yorsal"
             aria-label="Twitter"
           >
             <Twitter className="w-5 h-5" />
