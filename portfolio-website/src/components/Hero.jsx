@@ -13,6 +13,7 @@ const Hero = () => {
   const t = translations[language];
   const heroRef = useRef(null);
   const titleRef = useRef(null);
+  const titleSecondaryRef = useRef(null);
   const descRefs = useRef([]);
   const buttonsRef = useRef(null);
   const imageRef = useRef(null);
@@ -41,23 +42,54 @@ const Hero = () => {
     descRefs.current = [];
     
     const ctx = gsap.context(() => {
-      if (titleRef.current) {
-        const fullText = `${t.hero.greeting} ${t.hero.title}.`;
+      if (titleRef.current && titleSecondaryRef.current) {
+        const greeting = t.hero.greeting;
+        const title = t.hero.title;
+        const titleSecondary = t.hero.titleSecondary;
+        const fullText = `${greeting} ${title}.`;
+        const greetingText = `${greeting} `;
+        
         // 先设置初始状态
         gsap.set(titleRef.current, { 
           opacity: 1,
           text: '',
         });
+        gsap.set(titleSecondaryRef.current, {
+          opacity: 1,
+          text: '',
+        });
         
-        // 打字机效果
-        gsap.to(titleRef.current, {
+        // 创建时间线动画
+        const tl = gsap.timeline();
+        
+        // 第一步：打字显示原始文本（greeting + title）
+        tl.to(titleRef.current, {
           text: fullText,
           duration: 1.5,
           ease: 'none',
+        })
+        // 等待一段时间
+        .to({}, { duration: 1 })
+        // 只删除 title 部分，保留 greeting
+        .to(titleRef.current, {
+          text: greetingText,
+          duration: 0.8,
+          ease: 'none',
+        })
+        // 等待一小段时间
+        .to({}, { duration: 0.3 })
+        // 打字显示 titleSecondary（带渐变颜色）
+        .to(titleSecondaryRef.current, {
+          text: titleSecondary,
+          duration: 1.5,
+          ease: 'none',
           onComplete: () => {
-            // 打字完成后，确保文本正确显示
+            // 动画完成后，确保文本正确显示
             if (titleRef.current) {
-              titleRef.current.textContent = fullText;
+              titleRef.current.textContent = greetingText;
+            }
+            if (titleSecondaryRef.current) {
+              titleSecondaryRef.current.textContent = titleSecondary;
             }
           },
         });
@@ -97,7 +129,7 @@ const Hero = () => {
     }, heroRef);
 
     return () => ctx.revert();
-  }, [language, t.hero.greeting, t.hero.title]);
+  }, [language, t.hero.greeting, t.hero.title, t.hero.titleSecondary]);
 
   const openTelegram = () => {
     window.open('https://t.me/iamyorsal', '_blank', 'noopener,noreferrer');
@@ -128,11 +160,16 @@ const Hero = () => {
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16 w-full max-w-6xl pt-10 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start gap-6 text-left">
-          <h1
-            ref={titleRef}
-            className="text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl text-black dark:text-white"
-          >
-            {/* 文本将通过 GSAP 动画填充 */}
+          <h1 className="text-4xl font-black leading-tight tracking-[-0.033em] sm:w-[800px] sm:text-5xl text-black dark:text-white">
+            <span ref={titleRef}>
+              {/* greeting 和 title 将通过 GSAP 动画填充 */}
+            </span>
+            <span 
+              ref={titleSecondaryRef}
+              className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent"
+            >
+              {/* titleSecondary 将通过 GSAP 动画填充 */}
+            </span>
           </h1>
           <div className="max-w-xl flex flex-col gap-4">
             {Array.isArray(t.hero.description) ? (

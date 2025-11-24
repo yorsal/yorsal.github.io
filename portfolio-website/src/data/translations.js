@@ -9,6 +9,7 @@ export const translations = {
     hero: {
       greeting: '👋 你好！我是',
       title: '杨乐',
+      titleSecondary: '全栈开发工程师',
       subtitle: '全栈开发工程师',
       description: [
         '15年+大前端开发经验，精通 NextJS、React、Vue 及 Node.js 全栈技术，熟悉 Tailwind CSS、Prisma 等框架，具备 Electron 跨端应用与 Chrome 插件开发经验。',
@@ -97,6 +98,7 @@ export const translations = {
     hero: {
       greeting: '👋 Hello! I\'m',
       title: 'Yang Le',
+      titleSecondary: 'full-stack engineer',
       subtitle: 'Full-Stack Developer / WEB Frontend Leader',
       description: [
         '15+ years of frontend development experience, proficient in NextJS, React, Vue full-stack frameworks, familiar with Tailwind CSS, Prisma and other frameworks, with experience in Electron cross-platform applications and Chrome extension development.',
