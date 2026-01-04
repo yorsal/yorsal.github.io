@@ -21,7 +21,8 @@ export const translations = {
     },
     about: {
       title: '关于我',
-      description: '15年+前端开发经验，Monash University 计算机科学硕士。精通全栈工程与 DevOps，熟悉 NextJS、React、Vue、Node.js、TailwindCSS、Prisma 等现代技术栈。作为技术主力深度参与 Edmodo、MESHI-Skill 等国家级教育平台开发，主导重庆通卡 H5 微信版百万级用户项目架构设计。具备 ScrumMaster 和前端主管经验，擅长团队管理与技术选型，深度参与业务流程设计。',
+      description:
+        '15年+前端开发经验，Monash University 计算机科学硕士。精通全栈工程与 DevOps，熟悉 NextJS、React、Vue、Node.js、TailwindCSS、Prisma 等现代技术栈。作为技术主力深度参与 Edmodo、MESHI-Skill 等国家级教育平台开发，主导重庆通卡 H5 微信版百万级用户项目架构设计。具备 ScrumMaster 和前端主管经验，擅长团队管理与技术选型，深度参与业务流程设计。',
       principles: {
         title1: '全栈工程与 DevOps 能力',
         title2: '大型项目与架构经验',
@@ -63,7 +64,7 @@ export const translations = {
       },
       project2: {
         title: 'Chrome 插件 AI Chat Navigator',
-        desc: '一个用于 DeepSeek、ChatGPT 与 Gemini 聊天页面的 Chrome 扩展，帮助用户快速定位和导航聊天中的多个问题。个人独立开发项目，使用 Vite + React + TypeScript + TailwindCSS 构建。',  
+        desc: '一个用于 DeepSeek、ChatGPT 与 Gemini 聊天页面的 Chrome 扩展，帮助用户快速定位和导航聊天中的多个问题。个人独立开发项目，使用 Vite + React + TypeScript + TailwindCSS 构建。',
       },
       project3: {
         title: 'Edmodo - 全球最大学习平台',
@@ -76,7 +77,8 @@ export const translations = {
     },
     contact: {
       title: '联系我',
-      description: '我目前对新的机会和合作持开放态度。欢迎随时给我发送消息讨论任何您想讨论的内容。让我们一起构建一些伟大的东西！',
+      description:
+        '我目前对新的机会和合作持开放态度。欢迎随时给我发送消息讨论任何您想讨论的内容。让我们一起构建一些伟大的东西！',
       form: {
         name: '您的姓名',
         email: '您的邮箱',
@@ -85,7 +87,7 @@ export const translations = {
       },
     },
     footer: {
-      email: 'yang.le@example.com',
+      email: 'yorsal@gmail.com',
     },
   },
   en: {
@@ -96,7 +98,7 @@ export const translations = {
       contact: 'Contact me',
     },
     hero: {
-      greeting: '👋 Hello! I\'m',
+      greeting: "👋 Hello! I'm",
       title: 'Yang Le',
       titleSecondary: 'full-stack engineer',
       subtitle: 'Full-Stack Developer / WEB Frontend Leader',
@@ -105,12 +107,13 @@ export const translations = {
         'Strong capabilities in large-scale project architecture design and team management. As a technical lead, deeply involved in national-level education platform development, leading architecture design for million-user projects.',
         '2+ years of AI-assisted programming practitioner, skilled in using Cursor/GitHub Copilot to improve development efficiency by 40%+.',
       ],
-      letsTalk: 'Let\'s Talk (Telegram)',
+      letsTalk: "Let's Talk (Telegram)",
       downloadCV: 'Download CV',
     },
     about: {
       title: 'About Me',
-      description: '15+ years of frontend development experience, Master of Computer Science from Monash University. Proficient in full-stack engineering and DevOps, familiar with modern tech stacks including NextJS, React, Vue, Node.js, TailwindCSS, Prisma. As a technical lead, deeply involved in development of national-level education platforms like Edmodo and MESHI-Skill, leading architecture design for Chongqing Tongka H5 WeChat version with millions of users. Experienced as ScrumMaster and Frontend Lead, skilled in team management and technology selection, deeply involved in business process design.',
+      description:
+        '15+ years of frontend development experience, Master of Computer Science from Monash University. Proficient in full-stack engineering and DevOps, familiar with modern tech stacks including NextJS, React, Vue, Node.js, TailwindCSS, Prisma. As a technical lead, deeply involved in development of national-level education platforms like Edmodo and MESHI-Skill, leading architecture design for Chongqing Tongka H5 WeChat version with millions of users. Experienced as ScrumMaster and Frontend Lead, skilled in team management and technology selection, deeply involved in business process design.',
       principles: {
         title1: 'Full-Stack Engineering & DevOps',
         title2: 'Large-Scale Projects & Architecture',
@@ -155,8 +158,8 @@ export const translations = {
         desc: 'A Chrome extension for DeepSeek, ChatGPT and Gemini chat pages, helping users quickly locate and navigate multiple questions in chats. Independently developed personal project, built with Vite + React + TypeScript + TailwindCSS.',
       },
       project3: {
-        title: 'Edmodo - World\'s Largest Learning Platform',
-        desc: 'NetDragon\'s K-12 school and teacher education technology platform with over 110 million users globally. As Frontend Lead and ScrumMaster, responsible for frontend core functionality development, leading React frontend architecture refactoring, splitting admin core micro-frontend modules, improving page load speed by 40%.',
+        title: "Edmodo - World's Largest Learning Platform",
+        desc: "NetDragon's K-12 school and teacher education technology platform with over 110 million users globally. As Frontend Lead and ScrumMaster, responsible for frontend core functionality development, leading React frontend architecture refactoring, splitting admin core micro-frontend modules, improving page load speed by 40%.",
       },
       project4: {
         title: 'Chongqing Citizen App E-commerce Module',
@@ -165,7 +168,8 @@ export const translations = {
     },
     contact: {
       title: 'Get In Touch',
-      description: 'I\'m currently open to new opportunities and collaborations. Feel free to send me a message about anything you want to discuss. Let\'s build something great together!',
+      description:
+        "I'm currently open to new opportunities and collaborations. Feel free to send me a message about anything you want to discuss. Let's build something great together!",
       form: {
         name: 'Your Name',
         email: 'Your Email',
@@ -177,5 +181,4 @@ export const translations = {
       email: 'yorsal@gmail.com',
     },
   },
-};
-
+}

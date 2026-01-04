@@ -145,9 +145,7 @@ const Lightbox = ({ images, currentIndex, isOpen, onClose, title }) => {
                     goToSlide(index)
                   }}
                   className={`h-2 rounded-full transition-all duration-300 ${
-                    index === activeIndex
-                      ? 'w-8 bg-white'
-                      : 'w-2 bg-white/50 hover:bg-white/70'
+                    index === activeIndex ? 'w-8 bg-white' : 'w-2 bg-white/50 hover:bg-white/70'
                   }`}
                   aria-label={`Go to image ${index + 1}`}
                 />
@@ -306,35 +304,26 @@ const Projects = () => {
         '/showcase/weather-moments-2.webp',
         '/showcase/weather-moments-3.webp',
       ],
-      liveDemo: 'https://weather-moments.eu.cc/',
+      liveDemo: 'https://weather-moments.onrender.com/',
     },
     {
       title: t.projects.project2.title,
       desc: t.projects.project2.desc,
       tags: ['Vite', 'React', 'TypeScript', 'TailwindCSS', 'Chrome Extension'],
-      images: [
-        '/showcase/ai-chat-nav-1.webp',
-        '/showcase/ai-chat-nav-2.webp',
-      ],
+      images: ['/showcase/ai-chat-nav-1.webp', '/showcase/ai-chat-nav-2.webp'],
       github: 'https://github.com/yorsal/chrome-ai-chat-navigator',
     },
     {
       title: t.projects.project3.title,
       desc: t.projects.project3.desc,
       tags: ['React', 'Micro Frontend', 'Qiankun', 'CI/CD'],
-      images: [
-        '/showcase/edmodo-1.webp',
-        '/showcase/edmodo-2.webp',
-      ],
+      images: ['/showcase/edmodo-1.webp', '/showcase/edmodo-2.webp'],
     },
     {
       title: t.projects.project4.title,
       desc: t.projects.project4.desc,
       tags: ['Vue.js', 'H5', 'Hybrid App'],
-      images: [
-        '/showcase/e-1.webp',
-        '/showcase/e-2.webp',
-      ],
+      images: ['/showcase/e-1.webp', '/showcase/e-2.webp'],
     },
   ]
 
